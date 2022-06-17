@@ -231,47 +231,46 @@ span {
 }
 
 @keyframes redLight {
-  33.333% {
-    background: rgba(255, 0, 0, 0.3);
-    transition-duration: 0ms;
+  33% {
+    background: #ff0000;
   }
-  66.666% {
+  33.33% {
+    background: rgba(255, 0, 0, 0.3);
+  }
+  99% {
     background: rgba(255, 0, 0, 0.3);
   }
   100% {
     background: #ff0000;
-    transition-duration: 0ms;
   }
 }
 @keyframes yellowLight {
-  0% {
+  33% {
     background: rgba(255, 168, 0, 0.3);
   }
   33.333% {
     background: #ffa800;
-    transition-duration: 0ms;
   }
-  66.666% {
-    background: rgba(255, 168, 0, 0.3);
-    transition-duration: 0ms;
+  66% {
+    background: #ffa800;
   }
-  100% {
+  66.66% {
     background: rgba(255, 168, 0, 0.3);
   }
+
 }
 @keyframes greenLight {
-  0% {
-    background: rgba(5, 255, 0, 0.3);
-  }
-  33.333% {
+  66% {
     background: rgba(5, 255, 0, 0.3);
   }
   66.666% {
     background: #00ff19;
-    transition-duration: 0ms;
   }
-  100% {
+  99%{
+    background: #00ff19;
+    
+  }
+  99.999% {
     background: rgba(5, 255, 0, 0.3);
-    transition-duration: 0ms;
   }
 }
