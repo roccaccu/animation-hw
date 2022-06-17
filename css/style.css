@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1e1e1e;
+}
+
+.emojis {
+  display: flex;
+  gap: 100px;
+}
+/* Первый смайл */
+.smile {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #333ae7;
+}
+
+.pupil {
+  background: #0c0c0c;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.eye {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  background: #d9d9d9;
+}
+.eye:first-child {
+  position: absolute;
+  top: 75px;
+  left: 100px;
+}
+
+.eye:last-child {
+  position: absolute;
+  top: 75px;
+  right: 100px;
+}
+
+.pupil:first-child {
+  position: absolute;
+  top: 28px;
+  left: 55px;
+}
+
+.pupil:last-child {
+  position: absolute;
+  top: 28px;
+  right: 55px;
+}
+
+.pupil::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: -73px;
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  background: #333ae7;
+  animation: blink 4s ease-in-out 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 0.1);
+  }
+  50% {
+    transform: scale(1, 1) translateY(44px);
+  }
+  100% {
+    transform: scale(1, 0.1);
+  }
+}
+
+/* Второй смайл */
+.emoji-2 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #9f33e7;
+}
+
+.eye2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  background: #d9d9d9;
+  animation: blink2 4s ease-out 1s infinite;
+}
+.eye2:first-child {
+  position: absolute;
+  top: 75px;
+  left: 100px;
+}
+
+.eye2:last-child {
+  position: absolute;
+  top: 75px;
+  right: 100px;
+}
+
+.pupil2 {
+  background: #0c0c0c;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.pupil2:first-child {
+  position: absolute;
+  top: 28px;
+  left: 0px;
+}
+
+.pupil2:last-child {
+  position: absolute;
+  top: 28px;
+  right: 0px;
+}
+
+@keyframes blink2 {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1, 0.001);
+  }
+}
+
+/* Squares */
+.squares {
+  margin-top: 200px;
+  display: flex;
+  gap: 100px;
+}
+/* Квадрат 1 */
+.square:first-child {
+  margin: 70px;
+  width: 240px;
+  height: 240px;
+  background: #d9d9d9;
+  text-align: center;
+  animation: turn 5s linear infinite;
+}
+span {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 40px;
+  color: #000000;
+}
+@keyframes turn {
+  25% {
+    transform: rotate(-0.25turn);
+  }
+  50% {
+    transform: rotate(-0.5turn);
+  }
+  75% {
+    transform: rotate(-0.75turn);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+
+/* Second square */
+.square:last-child {
+  margin: 70px;
+  width: 240px;
+  height: 240px;
+  background: #d9d9d9;
+  text-align: center;
+  animation: turning 5s linear infinite;
+}
+
+@keyframes turning {
+  25% {
+    transform: rotate(-0.25turn) translate(-401px);
+  }
+  50% {
+    transform: rotate(-0.5turn) translate(-430px, -401px);
+  }
+  75% {
+    transform: rotate(-0.75turn) translate(0, -401px);
+  }
+  100% {
+    transform: rotate(-1turn) translate(0);
+  }
+}
+
+.trafficLight {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ff0000;
+  animation: redLight 9s infinite;
+}
+
+.yellow {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 168, 0, 0.3);
+  animation: yellowLight 9s infinite;
+}
+
+.green {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(5, 255, 0, 0.3);
+  animation: greenLight 9s infinite;
+}
+
+@keyframes redLight {
+  33.333% {
+    background: rgba(255, 0, 0, 0.3);
+    transition-duration: 0ms;
+  }
+  66.666% {
+    background: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background: #ff0000;
+    transition-duration: 0ms;
+  }
+}
+@keyframes yellowLight {
+  0% {
+    background: rgba(255, 168, 0, 0.3);
+  }
+  33.333% {
+    background: #ffa800;
+    transition-duration: 0ms;
+  }
+  66.666% {
+    background: rgba(255, 168, 0, 0.3);
+    transition-duration: 0ms;
+  }
+  100% {
+    background: rgba(255, 168, 0, 0.3);
+  }
+}
+@keyframes greenLight {
+  0% {
+    background: rgba(5, 255, 0, 0.3);
+  }
+  33.333% {
+    background: rgba(5, 255, 0, 0.3);
+  }
+  66.666% {
+    background: #00ff19;
+    transition-duration: 0ms;
+  }
+  100% {
+    background: rgba(5, 255, 0, 0.3);
+    transition-duration: 0ms;
+  }
+}
